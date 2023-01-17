@@ -1,0 +1,278 @@
+:root {
+  /*  COLORS  */
+  --gray: #ccc;
+  --orange: #aa6812;
+  --mainColor: #11122bf1;
+
+  /*  FONTS  */
+  --Abel-Font: Abel;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--mainColor);
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: var(--orange);
+  border-radius: 5px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  FOR HEADER  */
+.header {
+  width: 100%;
+  height: 250px;
+  background: #11122b;
+  color: var(--gray);
+}
+
+.header-details {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  Selects all the div elements in header-details  */
+.header-details > div {
+  margin: auto;
+}
+
+/*  For Logo  */
+.logo > img {
+  display: flex;
+  width: 200px;
+}
+
+/*  For Navigation Bar  */
+.navbar {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar > nav {
+  margin-bottom: 20px;
+}
+
+.navbar > nav > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar > nav > ul > li {
+  list-style: none;
+  margin: auto 20px;
+  transition: 1s;
+}
+
+.navbar > nav > ul > li > a {
+  color: #eee;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  position: relative;
+  right: 20px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navbar > nav > ul > li > a:hover {
+  color: var(--orange);
+}
+
+.image {
+  width: 100%;
+  height: 500px;
+  background: url(/images/fries-hero-bg.jpg) center center no-repeat;
+  background-size: cover;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bf710a50;
+}
+
+/*   For home title */
+.image > .title {
+  margin: auto 100px;
+}
+
+.image > .title > p {
+  background: #11122b;
+  color: var(--orange);
+  width: 300px;
+  font-size: 50px;
+  font-weight: 550;
+  margin-bottom: 10px;
+  animation: expand 1s linear infinite;
+  padding: 5px 20px;
+}
+
+/*
+@keyframes expand {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}*/
+
+.image > .title > span {
+  color: #11122b;
+  background: var(--orange);
+  padding: 5px 20px;
+  font-size: 30px;
+  font-weight: 500;
+  box-shadow: 0 0 5px #000;
+  animation: shake 1s linear infinite;
+}
+
+/*  Home Details  */
+.details {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(var(--orange), #9c7709e1);
+  border-top: 10px solid #fff;
+}
+
+.details > .what-we-do {
+  margin: auto 10px;
+  text-align: center;
+  max-width: 200px;
+  border-radius: 7px;
+  border-bottom: 4px solid #33333300;
+  padding: 10px;
+}
+
+.details > .what-we-do:hover {
+  border-bottom: 4px solid #000000ce;
+  position: relative;
+}
+
+.details > .what-we-do > strong {
+  font-size: 20px;
+  transition: 1s;
+}
+
+.details > .what-we-do > strong:hover {
+  letter-spacing: 1px;
+}
+
+.details > .what-we-do > p {
+  margin-top: 10px;
+}
+
+/*  FOR FOOTER  */
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #11122b;
+  height: 500px;
+}
+
+/*  Footer logo  */
+.footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+/*  Footer logo image  */
+.footer-logo > img {
+  width: 200px;
+  object-fit: cover;
+}
+
+/*  Footer info  */
+.footer-info {
+  display: flex;
+  width: 100%;
+  letter-spacing: 3px;
+}
+
+.footer-info > div {
+  margin: 20px auto 0px auto;
+  color: var(--gray);
+}
+
+.footer-info > .services {
+  color: var(--orange);
+}
+
+/*  Footer navigation  */
+.footer-navbar {
+  display: flex;
+}
+
+.footer-navbar > nav > ul {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0px;
+}
+
+.footer-navbar > nav > ul > li {
+  list-style: none;
+  transition: 1s;
+}
+
+.footer-navbar > nav > ul > li:hover,
+.navbar > nav > ul > li:hover {
+  transform: scale(1.3);
+  transform: scaleX(1.2);
+}
+
+.footer-navbar > nav > ul > li > a {
+  text-decoration: none;
+  color: var(--gray);
+  margin: auto 20px;
+}
+
+.footer-navbar > nav > ul > li > a:hover {
+  color: #aa6812;
+}
+
+/*  Footer Copyright  */
+.copyright {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.copyright > p {
+  font-size: 13px;
+  color: var(--gray);
+  position: absolute;
+  bottom: -50px;
+}
